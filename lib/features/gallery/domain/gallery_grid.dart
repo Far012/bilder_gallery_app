@@ -29,10 +29,16 @@ class GalleryGridWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             child: Container(
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color.fromARGB(255, 212, 207, 207),
-                  width: 0.5,
-                ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: const Color(0xFF109f8c), width: 0.2),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0x19404040),
+                    blurRadius: 2,
+                    offset: const Offset(0, 1),
+                  ),
+                ],
               ),
               child: Column(
                 children: [
@@ -49,7 +55,10 @@ class GalleryGridWidget extends StatelessWidget {
                     child: Center(
                       child: Text(
                         item.imageTitle,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
+                        style: const TextStyle(
+                          color: Color(0xFF065c4a),
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ),

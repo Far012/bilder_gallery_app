@@ -1,3 +1,4 @@
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:bilder_gallery_app/features/aboutme/presentation/about_me.dart';
 import 'package:bilder_gallery_app/features/gallery/domain/gallery_grid.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("MyGallery", style: TextStyle(color: Colors.white)),
-        backgroundColor: const Color(0xFF64011E),
+        backgroundColor: const Color(0xFF109f8c),
       ),
       body: Container(
         color: const Color(0xFFFEF7FF),
@@ -33,8 +34,14 @@ class _GalleryScreenState extends State<GalleryScreen> {
           });
         },
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.photo), label: "Bilder"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Über mich"),
+          NavigationDestination(
+            icon: Icon(LucideIcons.image, color: Color(0xFF109f8c)),
+            label: "Bilder",
+          ),
+          NavigationDestination(
+            icon: Icon(LucideIcons.user, color: Color(0xFF109f8c)),
+            label: "Über mich",
+          ),
         ],
       ),
     );

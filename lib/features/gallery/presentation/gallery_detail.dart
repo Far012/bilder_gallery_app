@@ -15,7 +15,7 @@ class DetailsScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
         ),
         title: const Text("Details"),
-        backgroundColor: const Color(0xFF64011E),
+        backgroundColor: const Color(0xFF109f8c),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -39,16 +39,23 @@ class DetailsScreen extends StatelessWidget {
                   Text(
                     item.imageTitle,
                     style: const TextStyle(
+                      color: Color(0xFF065c4a),
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(item.imageDate, style: const TextStyle(fontSize: 16)),
+                  Text(
+                    item.imageDate,
+                    style: const TextStyle(color: Color(0xFF065c4a)),
+                  ),
                   const SizedBox(height: 16),
                   Text(
                     item.imageDescription,
                     textAlign: TextAlign.justify,
-                    style: const TextStyle(fontSize: 16),
+                    style: const TextStyle(
+                      color: Color(0xFF08392e),
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
